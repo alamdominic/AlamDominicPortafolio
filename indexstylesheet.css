@@ -15,14 +15,38 @@ body.dark {
     color: #fff;
 }
 
+
 #navbar {
-    background-color: #edf2f4;
+    background: linear-gradient(to top,
+            rgba(255, 255, 255, 0.6),
+            /* blanco semi-transparente abajo */
+            rgba(255, 255, 255, 1)
+            /* totalmente transparente arriba */
+        );
+    padding-top: 0%;
+    color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+body.dark #navbar {
+    background: #121212;
     color: #fff;
 }
 
-#navbar-scrollspy {
-    background-color: #edf2f4;
+body.dark #navbar,
+body.dark #navbar .nav-link {
+    color: #fff !important;
 }
+
+body.dark #navbar .nav-link.active {
+    color: #f0c808 !important;
+    /* amarillo */
+}
+
 
 .nav-link.active {
     color: #f0c808 !important;
@@ -33,9 +57,14 @@ body.dark {
     padding-right: 10%;
 }
 
+#alamdominic {
+    width: 300px;
+    height: auto;
+}
+
 section {
     height: 100vh;
-    padding: 80px 20px 20px;
+    padding: 0px 20px 20px;
     scroll-margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -48,19 +77,25 @@ section {
 
 section#home {
     position: relative;
+    padding-bottom: 150px;
 }
 
 .scroll-down-indicator {
     position: absolute;
-    bottom: 200px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2.5rem;
     animation: bounce 1.5s infinite;
-    color: #000000;
+    color: #000;
     /* o el color que prefieras */
     z-index: 1000;
 }
+
+body.dark .scroll-down-indicator {
+    color: #fff;
+}
+
 
 @keyframes bounce {
 
@@ -115,24 +150,58 @@ section#home {
     padding-right: 40px;
 }
 
-.icon-container {
+/* === Estilos para contenedor de secciones de íconos === */
+.skill-icon {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
-    padding: 40px;
+    font-size: 1rem;
+    color: inherit;
     text-align: center;
-}
-
-.icon-container i,
-.icon-container span {
-    font-size: 48px;
-    /* Tamaño del ícono */
     transition: transform 0.3s ease;
 }
 
-.icon-container i:hover,
-.icon-container span:hover {
+/* Íconos: devicon o imágenes */
+.skill-icon i,
+.skill-icon img {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover para animación */
+.skill-icon i:hover,
+.skill-icon img:hover {
     transform: scale(1.2);
+}
+
+
+.skill-container i:hover,
+.skill-container span:hover {
+    transform: scale(1.2);
+}
+
+body.dark .skill-icon {
+    color: #fff;
+}
+
+
+hr {
+    display: none;
+}
+
+body.dark footer {
+    background-color: #121212;
+}
+
+body.dark footer .nav-link,
+body.dark footer p {
+    color: #fff !important;
+    /* fuerza el color blanco en textos y enlaces */
+}
+
+body.dark footer .border-bottom {
+    border-color: rgba(255, 255, 255, 0.2) !important;
 }

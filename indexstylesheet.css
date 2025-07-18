@@ -63,7 +63,7 @@ body.dark #navbar .nav-link.active {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 0px 20px 20px;
     scroll-margin-top: 80px;
     display: flex;
@@ -174,13 +174,13 @@ body.dark .scroll-down-indicator {
 /* Hover para animación */
 .skill-icon i:hover,
 .skill-icon img:hover {
-    transform: scale(1.2);
+    transform: scale(2);
 }
 
 
 .skill-container i:hover,
 .skill-container span:hover {
-    transform: scale(1.2);
+    transform: scale(2);
 }
 
 .card.mb-3 {
@@ -240,9 +240,113 @@ body.dark .card-text {
     padding-top: 0.5rem;
 }
 
+.proyectosHeading{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.meGhibli {
+    width: 80% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+.formularioContacto {
+    width: 600px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.formularioContacto:hover {
+    transform: translateY(-5px);
+}
 
+.formularioContacto label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
 
+.formularioContacto input,
+.formularioContacto textarea {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+.formularioContacto input:focus,
+.formularioContacto textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.formularioContacto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.formularioContacto button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive padding for mobile */
+@media (max-width: 576px) {
+    .formularioContacto {
+        padding: 1rem;
+    }
+}
+
+/* Modo oscuro */
+body.dark .formularioContacto {
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .formularioContacto label {
+    color: #f0c808;
+}
+
+body.dark .formularioContacto input,
+body.dark .formularioContacto textarea {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+body.dark .formularioContacto input::placeholder,
+body.dark .formularioContacto textarea::placeholder {
+    color: #aaa;
+}
+
+body.dark .formularioContacto button {
+    background-color: #f0c808;
+    color: #1e1e1e;
+}
+
+body.dark .formularioContacto button:hover {
+    background-color: #d9b207;
+}
 
 body.dark .skill-icon {
     color: #fff;
